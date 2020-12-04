@@ -1,0 +1,23 @@
+<h1>Hello World</h1>
+
+<% if user_signed_in? %>
+  <li>
+  <%= link_to('Logout', destroy_user_session_path, method: :delete, :class => 'btn btn-primary text-center block') %>   
+  </li>
+ 
+    <h2>Date and time</h2>
+    <button type="button"
+      onclick="document.getElementById('demo').innerHTML = Date()">
+      Display Date and Time.
+    </button>
+    <p id="demo"></p>
+  </table>
+</div>
+<% else %>
+  <li>
+    <%= link_to('Click here to sign in', new_user_session_path,:class => 'btn btn-primary') %>   
+  </li>
+  <li>
+    <%= link_to('Click here to sign up', signup_path,:class => 'btn btn-primary') %>
+  </li>
+<% end %>
